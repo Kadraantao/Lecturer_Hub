@@ -83,6 +83,14 @@ def init_db():
             FOREIGN KEY (course_id) REFERENCES courses(id) ON DELETE CASCADE,
             FOREIGN KEY (student_id) REFERENCES users(id) ON DELETE CASCADE
         );
+
+        CREATE TABLE IF NOT EXISTS sessions (
+            token TEXT PRIMARY KEY,
+            user_id INTEGER NOT NULL,
+            expires_at TEXT NOT NULL,
+            created_at TEXT DEFAULT (datetime('now')),
+            FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+        );
         """
     )
     conn.commit()
