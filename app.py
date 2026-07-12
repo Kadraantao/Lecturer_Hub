@@ -28,6 +28,9 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
+with open(ICON_PATH, "rb") as _f:
+    ICON_B64 = base64.b64encode(_f.read()).decode()
+
 
 # -------------------- Init DB + seed admin --------------------
 init_db()
@@ -37,11 +40,6 @@ seed_admin(
     password="admin123",
     full_name="Kadra",
 )
-
-# -------------------- Load icon once for reuse --------------------
-ICON_PATH = "C:\\Users\\alkad\\Downloads\\instructor_hub\\instructor_hub\\icons\\roll-call.png"
-with open(ICON_PATH, "rb") as _f:
-    ICON_B64 = base64.b64encode(_f.read()).decode()
 
 # -------------------- Styling --------------------
 st.markdown(
