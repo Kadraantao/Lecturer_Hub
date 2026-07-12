@@ -35,12 +35,19 @@ with open(ICON_PATH, "rb") as _f:
 
 # -------------------- Init DB + seed admin --------------------
 init_db()
-# 👇 CHANGE THESE VALUES to your own before deploying
-seed_admin(
-    email="[email protected]",
-    password="admin123",
-    full_name="Kadra",
-)
+
+# Load admin credentials from Streamlit Secrets (safe) with local fallback
+try:
+    ADMIN_EMAIL = st.secrets["admin"]["email"]
+    ADMIN_PASSWORD = st.secrets["admin"]["password"]
+    ADMIN_NAME = st.secrets["admin"]["full_name"]
+except (KeyError, FileNotFoundError):
+    # Local development fallback — only used when running on your computer
+    ADMIN_EMAIL = "[email protected]"
+    ADMIN_PASSWORD = "admin123"
+    ADMIN_NAME = "Kadra"
+
+seed_admin(email=ADMIN_EMAIL, password=ADMIN_PASSWORD, full_name=ADMIN_NAME)
 
 # -------------------- Styling --------------------
 st.markdown(
