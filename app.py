@@ -227,7 +227,7 @@ def login_screen():
             """,
             unsafe_allow_html=True,
         )
-        st.markdown("**Consultation booking · Class schedule · Course announcements**")
+        st.markdown("**Consultation booking Â· Class schedule Â· Course announcements**")
 
         tab_signin, tab_signup = st.tabs(["Sign in", "Sign up"])
 
@@ -268,7 +268,7 @@ def login_screen():
                 if st.form_submit_button("Create account", use_container_width=True):
                     ok, msg = sign_up(email, password, full_name)
                     (st.success if ok else st.error)(msg)
-        st.markdown("**Consultation booking · Class schedule · Course announcements**")
+        st.markdown("**Consultation booking Â· Class schedule Â· Course announcements**")
                 "Only student accounts can be created here. "
                 "The instructor account is set by the admin."
             )
