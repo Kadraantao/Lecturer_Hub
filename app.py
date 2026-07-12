@@ -23,11 +23,12 @@ BASE_DIR = Path(__file__).parent
 ICON_PATH = BASE_DIR / "icons" / "roll-call.png"
 
 st.set_page_config(
-    page_title="Instructor Hub",
+    page_title="CCS Studenthub",
     page_icon=str(ICON_PATH),
     layout="wide",
     initial_sidebar_state="expanded",
 )
+
 with open(ICON_PATH, "rb") as _f:
     ICON_B64 = base64.b64encode(_f.read()).decode()
 
@@ -220,7 +221,7 @@ def login_screen():
                     white-space: nowrap;
                     font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
                 ">
-                    Instructor Hub
+                    CCS Studenthub
                 </span>
             </div>
             """,
