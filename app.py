@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).parent
 ICON_PATH = BASE_DIR / "icons" / "ccs.jpg"
 
 st.set_page_config(
-    page_title="CCS Student Hub",
+    page_title="Student Hub",
     page_icon=str(ICON_PATH),
     layout="wide",
     initial_sidebar_state="expanded",
@@ -228,7 +228,7 @@ def login_screen():
                     white-space: nowrap;
                     font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
                 ">
-                    CCS Student Hub
+                    Student Hub
                 </span>
             </div>
             """,
