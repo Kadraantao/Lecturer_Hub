@@ -9,7 +9,7 @@ Default admin (change after first login by editing data.db or add a change-passw
 """
 import base64
 from datetime import datetime, timedelta
-
+from pathlib import Path
 import streamlit as st
 import extra_streamlit_components as stx
 
@@ -19,9 +19,12 @@ from database import init_db, seed_admin
 from student_views import render_student
 
 # -------------------- Page config --------------------
+BASE_DIR = Path(__file__).parent
+ICON_PATH = BASE_DIR / "icons" / "roll-call.png"
+
 st.set_page_config(
     page_title="Instructor Hub",
-    page_icon="C:\\Users\\alkad\\Downloads\\instructor_hub\\instructor_hub\\icons\\roll-call.png",
+    page_icon=str(ICON_PATH),
     layout="wide",
     initial_sidebar_state="expanded",
 )
