@@ -60,7 +60,7 @@ st.markdown(
             color: #1A1A1A;
         }
         .stApp p, .stApp label, .stApp span, .stApp div { font-size: 1.05rem; }
-
+        
         h1 { color: #C2185B; font-weight: 700; font-size: 5.5rem; letter-spacing: -0.02em; margin-bottom: 0.25rem; }
         h2 { color: #C2185B; font-weight: 600; font-size: 1.9rem; letter-spacing: -0.01em; }
         h3 { color: #C2185B; font-weight: 600; font-size: 1.45rem; }
@@ -158,6 +158,11 @@ st.markdown(
             /* Chips smaller too */
             .chip { font-size: 0.7rem; padding: 0.25rem 0.6rem; }
         }
+
+            /* Hide the "Press Enter to submit form" hint under text inputs inside forms */
+            [data-testid="InputInstructions"] {
+                 display: none !important;
+            }
     </style>
     """,
     unsafe_allow_html=True,
