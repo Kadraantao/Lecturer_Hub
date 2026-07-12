@@ -234,9 +234,7 @@ def login_screen():
         with tab_signin:
             with st.form("signin_form"):
                 email = st.text_input("Email", key="signin_email")
-                password = st.text_input(
-                    "Password", type="password", key="signin_pw"
-                )
+                password = st.text_input("Password", type="password", key="signin_pw")
                 if st.form_submit_button("Sign in", use_container_width=True):
                     user = sign_in(email, password)
                     if user:
@@ -249,7 +247,6 @@ def login_screen():
                         )
                         st.session_state.user = user
                         st.session_state.hub_session_token = token
-                        # Small delay so the browser has time to receive the cookie
                         import time
                         time.sleep(0.5)
                         st.rerun()
@@ -268,11 +265,10 @@ def login_screen():
                 if st.form_submit_button("Create account", use_container_width=True):
                     ok, msg = sign_up(email, password, full_name)
                     (st.success if ok else st.error)(msg)
-        st.markdown("**Consultation booking · Class schedule · Course announcements**")
+            st.caption(
                 "Only student accounts can be created here. "
                 "The instructor account is set by the admin."
             )
-
 
 # -------------------- Route --------------------
 # The cookie component reports `None` OR `{}` on the first script run
