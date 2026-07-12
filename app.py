@@ -20,7 +20,7 @@ from student_views import render_student
 
 # -------------------- Page config --------------------
 BASE_DIR = Path(__file__).parent
-ICON_PATH = BASE_DIR / "icons" / "roll-call.png"
+ICON_PATH = BASE_DIR / "icons" / "ccs.jpg"
 
 st.set_page_config(
     page_title="CCS Student Hub",
