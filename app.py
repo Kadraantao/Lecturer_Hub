@@ -61,108 +61,103 @@ st.markdown(
         }
         .stApp p, .stApp label, .stApp span, .stApp div { font-size: 1.05rem; }
 
-        /* Typography */
-        h1 {
-            color: #C2185B;
-            font-weight: 700;
-            font-size: 5.5rem;
-            letter-spacing: -0.02em;
-            margin-bottom: 0.25rem;
-        }
+        h1 { color: #C2185B; font-weight: 700; font-size: 5.5rem; letter-spacing: -0.02em; margin-bottom: 0.25rem; }
         h2 { color: #C2185B; font-weight: 600; font-size: 1.9rem; letter-spacing: -0.01em; }
         h3 { color: #C2185B; font-weight: 600; font-size: 1.45rem; }
         h4 { color: #1A1A1A; font-weight: 600; font-size: 1.2rem; }
 
-        /* Sidebar */
-        section[data-testid="stSidebar"] {
-            background-color: #FAFAFA;
-            border-right: 1px solid #EEEEEE;
-        }
+        section[data-testid="stSidebar"] { background-color: #FAFAFA; border-right: 1px solid #EEEEEE; }
         section[data-testid="stSidebar"] .stMarkdown { font-size: 1.05rem; }
-        section[data-testid="stSidebar"] [role="radiogroup"] label {
-            font-size: 1.05rem;
-            padding: 0.35rem 0;
-        }
+        section[data-testid="stSidebar"] [role="radiogroup"] label { font-size: 1.05rem; padding: 0.35rem 0; }
 
-        /* Buttons */
         .stButton > button, [data-testid="stFormSubmitButton"] button {
-            background-color: #C2185B;
-            color: #FFFFFF;
-            border: none;
-            border-radius: 12px;
-            padding: 0.7rem 1.6rem;
-            font-weight: 500;
-            font-size: 1rem;
-            transition: all 0.15s ease;
+            background-color: #C2185B; color: #FFFFFF; border: none; border-radius: 12px;
+            padding: 0.7rem 1.6rem; font-weight: 500; font-size: 1rem; transition: all 0.15s ease;
             box-shadow: 0 1px 2px rgba(194, 24, 91, 0.15);
         }
         .stButton > button:hover, [data-testid="stFormSubmitButton"] button:hover {
-            background-color: #AD1457;
-            transform: translateY(-1px);
-            box-shadow: 0 6px 18px rgba(194, 24, 91, 0.30);
-            color: #FFFFFF;
+            background-color: #AD1457; transform: translateY(-1px);
+            box-shadow: 0 6px 18px rgba(194, 24, 91, 0.30); color: #FFFFFF;
         }
         .stButton > button:focus { outline: none; box-shadow: 0 0 0 3px rgba(194, 24, 91, 0.25); color: #FFFFFF; }
 
-        /* Cards */
         .card {
-            background: #FFFFFF;
-            border: 1px solid #F0F0F0;
-            border-left: 4px solid #C2185B;
-            border-radius: 14px;
-            padding: 1.5rem 1.75rem;
-            margin-bottom: 1rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-            transition: box-shadow 0.15s ease;
-            font-size: 1.05rem;
+            background: #FFFFFF; border: 1px solid #F0F0F0; border-left: 4px solid #C2185B;
+            border-radius: 14px; padding: 1.5rem 1.75rem; margin-bottom: 1rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04); transition: box-shadow 0.15s ease; font-size: 1.05rem;
         }
         .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
         .card h4 { color: #1A1A1A; margin: 0; font-size: 1.25rem; }
         .card p { font-size: 1rem; line-height: 1.5; }
 
-        /* Chips */
         .chip {
-            display: inline-block;
-            padding: 0.3rem 0.9rem;
-            border-radius: 999px;
-            font-size: 0.78rem;
-            font-weight: 700;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            white-space: nowrap;
+            display: inline-block; padding: 0.3rem 0.9rem; border-radius: 999px;
+            font-size: 0.78rem; font-weight: 700; letter-spacing: 0.05em;
+            text-transform: uppercase; white-space: nowrap;
         }
         .chip-pending   { background: #FFF3E0; color: #E65100; }
         .chip-approved  { background: #E8F5E9; color: #2E7D32; }
         .chip-confirmed { background: #E8F5E9; color: #2E7D32; }
         .chip-rejected  { background: #FFEBEE; color: #C62828; }
 
-        /* Inputs */
         input[type="text"], input[type="password"], textarea {
-            font-size: 1.05rem !important;
-            border-radius: 10px !important;
-            padding: 0.6rem 0.85rem !important;
+            font-size: 1.05rem !important; border-radius: 10px !important; padding: 0.6rem 0.85rem !important;
         }
         .stSelectbox div[data-baseweb="select"] > div,
         .stDateInput input, .stTimeInput input {
-            font-size: 1.05rem !important;
-            border-radius: 10px !important;
+            font-size: 1.05rem !important; border-radius: 10px !important;
         }
 
-        /* Tabs */
-        .stTabs [data-baseweb="tab-list"] { gap: 0.5rem; }
+        .stTabs [data-baseweb="tab-list"] { gap: 0.5rem; flex-wrap: wrap; }
         .stTabs [data-baseweb="tab"] { font-size: 1.05rem; padding: 0.6rem 1rem; }
         .stTabs [data-baseweb="tab-list"] button[aria-selected="true"] { color: #C2185B; }
         .stTabs [data-baseweb="tab-highlight"] { background-color: #C2185B; }
 
-        /* Metrics */
         [data-testid="stMetricValue"] { color: #C2185B; font-size: 2.2rem; font-weight: 700; }
         [data-testid="stMetricLabel"] { font-size: 1rem; }
 
-        /* Dividers */
         hr { border-color: #EEEEEE; margin: 1.5rem 0; }
-
-        /* DataFrames */
         .stDataFrame { font-size: 1rem; }
+
+        /* ============ MOBILE / SMALL SCREENS ============ */
+        @media (max-width: 768px) {
+            .stApp p, .stApp label, .stApp span, .stApp div { font-size: 1rem; }
+            h1 { font-size: 2.5rem !important; letter-spacing: -0.01em; }
+            h2 { font-size: 1.5rem !important; }
+            h3 { font-size: 1.25rem !important; }
+            h4 { font-size: 1.05rem !important; }
+
+            /* Force the icon + title row to stack vertically */
+            .hero {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                gap: 0.75rem !important;
+            }
+            .hero img { width: 70px !important; }
+            .hero .title-text {
+                font-size: 2.5rem !important;
+                white-space: normal !important;
+                line-height: 1.1 !important;
+            }
+
+            /* Cards get less padding on mobile */
+            .card { padding: 1rem 1rem; border-radius: 12px; }
+            .card h4 { font-size: 1.1rem; }
+
+            /* Buttons full-width on mobile */
+            .stButton > button, [data-testid="stFormSubmitButton"] button {
+                width: 100%; padding: 0.75rem 1rem;
+            }
+
+            /* Tables horizontally scroll instead of overflow */
+            .stDataFrame { overflow-x: auto; }
+
+            /* Metrics: smaller so they don't overflow */
+            [data-testid="stMetricValue"] { font-size: 1.6rem; }
+
+            /* Chips smaller too */
+            .chip { font-size: 0.7rem; padding: 0.25rem 0.6rem; }
+        }
     </style>
     """,
     unsafe_allow_html=True,
@@ -217,9 +212,9 @@ def login_screen():
     with col_mid:
         st.markdown(
             f"""
-            <div style="display: flex; align-items: center; gap: 20px; margin: 1rem 0 1.5rem 0;">
-                <img src="data:image/png;base64,{ICON_B64}" style="width: 130px; height: auto; display: block;"/>
-                <span style="
+            <div class="hero" style="display: flex; align-items: center; gap: 20px; margin: 1rem 0 1.5rem 0;">
+                <img src="data:image/jpeg;base64,{ICON_B64}" style="width: 130px; height: auto; display: block;"/>
+                <span class="title-text" style="
                     color: #C2185B;
                     font-size: 6rem;
                     font-weight: 800;
@@ -234,6 +229,7 @@ def login_screen():
             """,
             unsafe_allow_html=True,
         )
+        # ... rest stays the same
         st.markdown("**Consultation booking · Class schedule · Course announcements**")
 
         tab_signin, tab_signup = st.tabs(["Sign in", "Sign up"])
